@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask 
 from flask import render_template 
 
@@ -10,10 +9,4 @@ def home():
 
 app.run(
 	debug=True)
-=======
-boop
 
-boomshakalak
-
-hi :)
->>>>>>> master
