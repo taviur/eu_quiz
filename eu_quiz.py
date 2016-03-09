@@ -19,12 +19,8 @@ def eu_quiz():
 def quiz_data_collection():
 	form_data = request.form
 	print int(form_data['Q1'])
-	return "All OK"
-
-def results_addition():
-	return 
-
-def results_presentation():
+	quiz_results = int(form_data['Q1'])
+	return u"Your answer is {}".format(quiz_results)
 
 
 #'debug = True' allows it to update itself without you having to re-run it in the terminal/shell
