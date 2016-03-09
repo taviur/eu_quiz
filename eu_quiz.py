@@ -18,9 +18,15 @@ def eu_quiz():
 @app.route("/take-quiz", methods=['POST'])
 def quiz_data_collection():
 	form_data = request.form
-	print int(form_data['Q1'])
-	quiz_results = int(form_data['Q1'])
-	return u"Your answer is {}".format(quiz_results)
+	quiz_results1 = int(form_data['Q1'])
+	quiz_results2 = int(form_data['Q2'])
+	return u"Your answer is {}".format(quiz_results1 + quiz_results2)
+
+'''def quiz_q1():
+	return int(form_data['Q1'])
+
+def quiz_q2():
+	return int(form_data['Q2'])'''
 
 
 #'debug = True' allows it to update itself without you having to re-run it in the terminal/shell
