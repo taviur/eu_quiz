@@ -35,6 +35,8 @@ def quiz_data_collection():
 
 	quiz_results_added = result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result8 + result10
 
+	save_comment(request)
+
 	if quiz_results_added >= 0 and quiz_results_added <= 10:
 		return stay()
 	elif quiz_results_added >= 11 and quiz_results_added <= 20:
@@ -43,6 +45,8 @@ def quiz_data_collection():
 		return maybe_leave()
 	else:
 		return leave()
+
+
 
 def stay():
 	return "You should stay"
@@ -57,23 +61,21 @@ def leave():
 	return "You should leave"
 
 
-@app.route('/save-comment', methods=['POST'])
-def save_comment():
-    # This is to make sure the HTTP method is POST and not any other
-    if request.method == 'POST':
+def save_comment(request):
+    print 'Anything'
        
-        Q1_csv = request.form['Q1']
-        Q2_csv = request.form['Q2']
+    print 'Anything again'   
 
-        fieldnames = ['Q1', 'Q2']
+    Q1 = request.form['Q1']
+    Q2 = request.form['Q2']
 
-        with open('eu_spreadsheet.csv','w') as inFile:
+    fieldnames = ['Q1', 'Q2']
+
+    with open('eu_spreadsheet.csv','a') as inFile:
           
-            writer = csv.DictWriter(inFIle, fieldnames=fieldnames)
+    	writer = csv.DictWriter(inFile, fieldnames=fieldnames)
 
-            writer.writerow({'Q1': Q1, 'Q2': Q2})
-
-        return quiz_data_collection()
+        writer.writerow({'Q1': Q1, 'Q2': Q2})
 
 
 #return u"Your answer is {}".format(quiz_results1 + quiz_results2)
