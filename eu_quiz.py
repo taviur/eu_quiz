@@ -4,6 +4,9 @@ from flask import Flask
 from flask import render_template
 from flask import request
 
+import csv
+import unicodecsv
+
 app = Flask("My App")
 
 @app.route("/")
@@ -52,6 +55,25 @@ def maybe_leave():
 
 def leave():
 	return "You should leave"
+
+
+@app.route('/save-comment', methods=['POST'])
+def save_comment():
+    # This is to make sure the HTTP method is POST and not any other
+    if request.method == 'POST':
+       
+        Q1_csv = request.form['Q1']
+        Q2_csv = request.form['Q2']
+
+        fieldnames = ['Q1', 'Q2']
+
+        with open('eu_spreadsheet.csv','w') as inFile:
+          
+            writer = csv.DictWriter(inFIle, fieldnames=fieldnames)
+
+            writer.writerow({'Q1': Q1, 'Q2': Q2})
+
+        return quiz_data_collection()
 
 
 #return u"Your answer is {}".format(quiz_results1 + quiz_results2)
