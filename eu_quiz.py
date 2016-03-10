@@ -18,9 +18,43 @@ def eu_quiz():
 @app.route("/take-quiz", methods=['POST'])
 def quiz_data_collection():
 	form_data = request.form
-	quiz_results1 = int(form_data['Q1'])
-	quiz_results2 = int(form_data['Q2'])
-	return u"Your answer is {}".format(quiz_results1 + quiz_results2)
+
+	result1 = int(form_data['Q1'])
+	result2 = int(form_data['Q2'])
+	result3 = int(form_data['Q3'])
+	result4 = int(form_data['Q4'])
+	result5 = int(form_data['Q5'])
+	result6 = int(form_data['Q6'])
+	result7 = int(form_data['Q7'])
+	result8 = int(form_data['Q8'])
+	result9 = int(form_data['Q9'])
+	result10 = int(form_data['Q10'])
+
+	quiz_results_added = result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result8 + result10
+
+	if quiz_results_added >= 0 and quiz_results_added <= 10:
+		return stay()
+	elif quiz_results_added >= 11 and quiz_results_added <= 20:
+		return maybe_stay()
+	elif quiz_results_added >= 21 and quiz_results_added <= 30:
+		return maybe_leave()
+	else:
+		return leave()
+
+def stay():
+	return "You should stay"
+
+def maybe_stay():
+	return "You should maybe stay"
+
+def maybe_leave():
+	return "You should maybe leave"
+
+def leave():
+	return "You should leave"
+
+
+#return u"Your answer is {}".format(quiz_results1 + quiz_results2)
 
 '''def quiz_q1():
 	return int(form_data['Q1'])
