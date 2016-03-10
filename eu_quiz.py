@@ -33,58 +33,65 @@ def quiz_data_collection():
 	result9 = int(form_data['Q9'])
 	result10 = int(form_data['Q10'])
 
-	quiz_results_added = result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result8 + result10
+	quiz_results_added = result1 + result2 + result3 + result4 + result5 + result6 + result7 + result8 + result9 + result10
 
 	save_comment(request)
 
 	if quiz_results_added >= 0 and quiz_results_added <= 10:
-		return stay()
-	elif quiz_results_added >= 11 and quiz_results_added <= 20:
-		return maybe_stay()
-	elif quiz_results_added >= 21 and quiz_results_added <= 30:
-		return maybe_leave()
-	else:
 		return leave()
+	elif quiz_results_added >= 11 and quiz_results_added <= 20:
+		return maybe_leave()
+	elif quiz_results_added >= 21 and quiz_results_added <= 30:
+		return maybe_stay()
+	else:
+		return stay()
 
 
 
 def stay():
-	return "You should stay"
+	return render_template("stay.html")
 
 def maybe_stay():
-	return "You should maybe stay"
+	return render_template("maybe_stay.html")
 
 def maybe_leave():
-	return "You should maybe leave"
+	return render_template("maybe_leave.html")
 
 def leave():
-	return "You should leave"
+	return render_template("leave.html")
 
 
 def save_comment(request):
-    print 'Anything'
+    print 'All working!'
        
-    print 'Anything again'   
-
     Q1 = request.form['Q1']
     Q2 = request.form['Q2']
+    Q3 = request.form['Q3']
+    Q4 = request.form['Q4']
+    Q5 = request.form['Q5']
+    Q6 = request.form['Q6']
+    Q7 = request.form['Q7']
+    Q8 = request.form['Q8']
+    Q9 = request.form['Q9']
+    Q10 = request.form['Q10']
 
-    fieldnames = ['Q1', 'Q2']
+
+    fieldnames = ['Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'Q9', 'Q10']
 
     with open('eu_spreadsheet.csv','a') as inFile:
           
     	writer = csv.DictWriter(inFile, fieldnames=fieldnames)
 
-        writer.writerow({'Q1': Q1, 'Q2': Q2})
+        writer.writerow({'Q1': Q1, 'Q2': Q2, 'Q3': Q3, 'Q4': Q4, 'Q5': Q5, 'Q6': Q6, 'Q7': Q7, 'Q8': Q8, 'Q9': Q9, 'Q10': Q10})
 
 
 #return u"Your answer is {}".format(quiz_results1 + quiz_results2)
 
-'''def quiz_q1():
-	return int(form_data['Q1'])
+#def quiz_q1():
+#	return int(form_data['Q1'])
 
-def quiz_q2():
-	return int(form_data['Q2'])'''
+#def quiz_q2():
+#	return int(form_data['Q2'])
 
 #'debug = True' allows it to update itself without you having to re-run it in the terminal/shell
 #port=xxxx changes the port so that you would now find the page at: http://127.0.0.1:3672/ <-- for example.
