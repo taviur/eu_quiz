@@ -28,7 +28,6 @@ def quiz_data_collection():
 def quiz_q2():
 	return int(form_data['Q2'])'''
 
-
 #'debug = True' allows it to update itself without you having to re-run it in the terminal/shell
 #port=xxxx changes the port so that you would now find the page at: http://127.0.0.1:3672/ <-- for example.
 #app.run() needs to go after all the functions, otherwise the functions will not be run!
