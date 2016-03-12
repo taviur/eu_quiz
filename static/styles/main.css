@@ -26,6 +26,19 @@ text-align: center;
 padding: 10px 100px 10px 100px;
 }
 
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+	margin-left: 93%;
+}
+
+#submit {
+	padding: 0px 500px 0px 500px;
+}
+
 ul {
 padding: 10px 100px 10px 100px;
 }
@@ -48,4 +61,3 @@ p {
 padding: 0 0 0 50px;
 display: block;
 }
-
