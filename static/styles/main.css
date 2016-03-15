@@ -22,8 +22,22 @@ margin: 0 auto;
 text-align: center;
 }
 
+.button {
+	background-color: blue;
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
 #quiz-form {
 padding: 10px 100px 10px 100px;
+}
+
+#intro {
+	padding-bottom: 150px;
 }
 
 .left {
@@ -33,6 +47,7 @@ padding: 10px 100px 10px 100px;
 
 .right {
 	margin-left: 93%;
+	text-decoration: none;
 }
 
 #submit {
