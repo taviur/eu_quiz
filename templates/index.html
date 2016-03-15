@@ -36,7 +36,8 @@ $(document).ready(function(){
 <a class="twitter-share-button" href="https://twitter.com/share">Tweet</a></div>
 
 	<div id="quiz-form" style="padding: 4%; background-image: url(http://www.dontbeafuckingidiot.uk/images/map.png); background-size: cover; background-position: bottom">
-	<form method="post" action="/take-quiz">
+	
+    <form method="post" action="/take-quiz">
 		<h3><label for="Q1">How likely are you to move to another EU country?</label></h3>
 		<input type="range" min="0" max="4" value="2" class="fader" name="Q1"><br>
             <div class="left">
@@ -131,7 +132,7 @@ $(document).ready(function(){
 
 		<br />
         <br />
-		<div class="submit-button"><input type="submit"></div>
+		<div class="submit-button" style="text-align:center"><input type="submit" value='SUBMIT →'></div>
 	</form>
 </div>
 
