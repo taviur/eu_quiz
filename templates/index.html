@@ -15,15 +15,14 @@ $(document).ready(function(){
      <link rel='stylesheet' type='text/css' href='{{ url_for('static',filename='styles/main.css') }}'>
 </head>
 <body>
-	<header>
 		<a id="home">
+            <img src="/images/logo.gif">
 			<h1>Should I Stay or Should I Go?</h1>
         </a>
-	</header>
     <div id="intro">
         <h3>The EU referendum is happening on 23rd June 2016, but do we really know whether we should stay in the EU or leave the EU? Take 'Should I Stay or Should I Go' to find out which way you're currently inclined to swing and use your results to help you find out a bit more!</h3>
         
-        <h3><button type="button" class="button"><a href="#quiz-form">Go go go!</a></button></h3>
+        <h3><button type="button" class="button"><a href="#quiz-form">IN OR OUT? →</a></button></h3>
     </div>
 	<div id="quiz-form">
 	<form method="post" action="/take-quiz">
