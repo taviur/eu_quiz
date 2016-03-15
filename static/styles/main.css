@@ -6,9 +6,9 @@ font-color: rgba(255, 255, 255, 1);
 
 h1 {
 font-size: 70px;
-padding: 20px 20px 20px 20px;
+padding: 100px 20px 20px 100px;
 color: black;
-text-align: center;
+float: center;
 }
 
 h2 {
@@ -54,7 +54,7 @@ body {
 }
 
 #intro {
-	padding-bottom: 150px;
+	padding: 50px 0px 50px 0px;
 	max-width: 1000px;
 	text-align: center;
 	margin: 0 auto;
