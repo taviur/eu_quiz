@@ -53,6 +53,7 @@ body {
 
 #quiz-form {
 	padding: 10px 100px 10px 100px;
+	max-width: 1000px;
 }
 
 #logo {
@@ -63,7 +64,11 @@ body {
 	max-width: 1000px;
 	padding: 70px 0px;
 	margin: 0 auto;
+	float: center;
 }
+
+
+
 
 .left {
     float: left;
