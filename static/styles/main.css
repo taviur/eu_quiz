@@ -5,7 +5,7 @@ font-color: rgba(255, 255, 255, 1);
 }
 
 h1 {
-font-size: 80px;
+font-size: 70px;
 padding: 20px 20px 20px 20px;
 color: black;
 text-align: center;
@@ -30,7 +30,7 @@ a {
 }
 
 body {
-	background-color: rgba(40, 44, 145, 0.9);
+	background-color: #2BBED8;
 }
 
 .button {
@@ -47,6 +47,10 @@ body {
 
 #quiz-form {
 	padding: 10px 100px 10px 100px;
+}
+
+#logo {
+	float: right;
 }
 
 #intro {
