@@ -67,21 +67,26 @@ body {
 	float: center;
 }
 
-
-
-
 .left {
     float: left;
     width: 50%;
 }
 
 .right {
-	margin-left: 93%;
+	float: right;
 	text-decoration: none;
 }
 
-#submit {
-	padding: 0px 500px 0px 500px;
+input[type=submit] {
+	background-color: rgba(40, 44, 145, 0.9);
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 12px;
 }
 
 ul {
