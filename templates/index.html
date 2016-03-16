@@ -22,75 +22,79 @@ $(document).ready(function(){
      <link rel='stylesheet' type='text/css' href='{{ url_for('static',filename='styles/main.css') }}'>
      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
-<header>
 <div id="home">
             <img id="logo" src="https://iconewsblog.files.wordpress.com/2016/01/eu-referendum-b.gif">
-            <h1>Should I Stay or Should I Go?</h1>
+            <h1 id="home-h1">Should I Stay or Should I Go?</h1>
         </div>
     <div id="intro">
                 
-        <h3>The EU referendum is happening on 23rd June 2016, but do we really know whether we should stay in the EU or leave the EU? Take 'Should I Stay or Should I Go' to find out which way you're currently inclined to swing and use your results to help you find out a bit more!</h3>
+        <h3>The EU referendum is happening on 23rd June 2016, but do we really know whether we should stay in the EU or leave the EU? 
+
+            Sure, there's a ton of information floating around about how leaving or staying would affect the UK, but it's all GDP this and £1.8bn that - but what does it actually mean for our day to day lives? Well we've tried our hardest to bring to light the concrete, real life issues that we would notice a change in in our everyday lives & formulated it into a handy little quiz to help you identify which decision could possibly the right one for you.
+
+            Take 'Should I Stay or Should I Go' and have a whale of a time!</h3>
         
         <h3><button type="button" class="button"><a href="#quiz-form">IN OR OUT? →</a></button></h3>
-</header>
-<div style="text-align: center"><div class="fb-share-button" data-href="http://127.0.0.1:3672/" data-layout="button_count"></div>
+<div style="text-align:center"><div class="fb-share-button" data-href="http://127.0.0.1:3672/" data-layout="button_count"></div>
 <a class="twitter-share-button" href="https://twitter.com/share">Tweet</a></div>
-
-	<div id="quiz-form">
+<br />
+<br />
+	<div id="quiz-form" style="padding: 4%; background-image: url(http://www.dontbeafuckingidiot.uk/images/map.png); background-size: cover"> <img class="background" src="" alt="EU">
+	<h2>How important are the following issues to you?</h2>
     <form method="post" action="/take-quiz">
-		<h3><label for="Q1">How likely are you to move to another EU country?</label></h3>
+		<h3><label for="Q1">Being able to move to another EU country e.g. for work or study</label></h3>
 		<input type="range" min="0" max="4" value="2" class="fader" name="Q1"><br>
             <div class="left">
-                <p>Likely</p>
+                <p>Not important</p>
             </div>
             <div class="right">
-                <p>Not Likely</p>
+                <p>Important</p>
             </div>
 
-        <h3><label for="Q2">Are you interested in visiting other EU countries in the future?</label></h3>
+        <h3><label for="Q2">Being able to visit another EU country e.g. to see family abroad or for a holiday</label></h3>
         <input type="range" min="0" max="4" value="2" class="fader" name="Q2"><br>
             <div class="left">
-                <p>Interested</p>
+                <p>Not important</p>
             </div>
             <div class="right">
-                <p>Not Interested</p>
+                <p>Important</p>
             </div>
 
-        <h3><label for="Q3">How important are issues like pollution, beach cleanliness and public access to information about the environment to you?</label></h3>
+        <h3><label for="Q3">Clean beaches and/or public access to information about the environment</label></h3>
         <input type="range" min="0" max="4" value="2" class="fader" name="Q3"><br>
             <div class="left">
-                <p>Important</p>
+                <p>Not important</p>
             </div>
             <div class="right">
-                <p>Not Important</p>
+                <p>Important</p>
             </div>
 
-        <h3><label for="Q4">How important do you find workers rights, such as maternity/paternity leave or holiday pay?</label></h3>
+        <h3><label for="Q4">Workers rights e.g. maternity leave, paternity leave, holiday pay</label></h3>
         <input type="range" min="0" max="4" value="2" class="fader" name="Q4"><br>
             <div class="left">
+                <p>Not important</p>
+            </div>
+            <div class="right">
                 <p>Important</p>
             </div>
-            <div class="right">
-                <p>Not Important</p>
-            </div>
 
 
-        <h3><label for="Q5">Do you, or anyone you know, rely on farming subsidies?</label></h3>
+        <h3><label for="Q5">Farming subsidies</label></h3>
         <input type="range" min="0" max="4" value="2" class="fader" name="Q5">Yes<br>
             <div class="left">
-                <p>A lot</p>
+                <p>Not important</p>
             </div>
             <div class="right">
-                <p>Never</p>
+                <p>Important</p>
             </div>
 
-        <h3><label for="Q6">How likely are you to be able to afford to pay for healthcare in an EU country outside of the UK?</label></h3>
+        <h3><label for="Q6">Not needing to pay for healthcare should you fall ill or get hurt whilst in another EU country</label></h3>
         <input type="range" min="0" max="4" value="2" class="fader" name="Q6">
             <div class="left">
-                <p>Likely</p>
+                <p>Not important</p>
             </div>
             <div class="right">
-                <p>Not Likely</p>
+                <p>Important</p>
             </div>
 
         <h3><label for="Q7">Question 7?</label></h3>

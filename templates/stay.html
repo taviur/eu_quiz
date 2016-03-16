@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <head>
-
+<link href="{{ url_for('static',filename='styles/dist/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+     <link rel='stylesheet' type='text/css' href='{{ url_for('static',filename='styles/main.css') }}'>
 </head>
-<body>
-	<header>
-		<a name="stay">
-			<h1>You should vote to stay in the EU.</h1>
+<body id="results">
+<div id="page-wrap">
+		<header>
+		<div class="results" name="stay">
+			<h1 class="results">You should vote to stay in the EU.</h1>
 	</header>
+
+</div>
 </body>
