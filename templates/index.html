@@ -22,7 +22,7 @@ $(document).ready(function(){
      <link rel='stylesheet' type='text/css' href='{{ url_for('static',filename='styles/main.css') }}'>
      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 </head>
-<body>
+<header>
 <div id="home">
             <img id="logo" src="https://iconewsblog.files.wordpress.com/2016/01/eu-referendum-b.gif">
             <h1>Should I Stay or Should I Go?</h1>
@@ -32,11 +32,13 @@ $(document).ready(function(){
         <h3>The EU referendum is happening on 23rd June 2016, but do we really know whether we should stay in the EU or leave the EU? Take 'Should I Stay or Should I Go' to find out which way you're currently inclined to swing and use your results to help you find out a bit more!</h3>
         
         <h3><button type="button" class="button"><a href="#quiz-form">IN OR OUT? →</a></button></h3>
+</header>
 <div style="text-align: center"><div class="fb-share-button" data-href="http://127.0.0.1:3672/" data-layout="button_count"></div>
 <a class="twitter-share-button" href="https://twitter.com/share">Tweet</a></div>
 
 	<div id="quiz-form" style="padding: 4%; background-image: url(http://www.dontbeafuckingidiot.uk/images/map.png); background-size: cover; background-position: bottom">
-	<form method="post" action="/take-quiz">
+
+    <form method="post" action="/take-quiz">
 		<h3><label for="Q1">How likely are you to move to another EU country?</label></h3>
 		<input type="range" min="0" max="4" value="2" class="fader" name="Q1"><br>
             <div class="left">
