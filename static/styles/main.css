@@ -1,11 +1,12 @@
 #page-wrap {
-     width: 100%;
+     width: 800px;
      margin: 0 auto;
+     text-align: center;
 }
 
 h1.results {
 	background: rgba(255, 255, 255, 0.5);
-
+	padding: 50px 100px 100px 100px;
 }
 
 li {
