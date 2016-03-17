@@ -6,16 +6,45 @@
 
 div.results-header {
 	background: rgba(255, 255, 255, 0.5);
-	padding: 50px 100px 100px 100px;
+	padding: 50px 100px 50px 100px;
 	margin-top: 100px;
 }
 
 div.results-body {
 	background: rgba(255, 255, 255, 0.5);
 	margin: 0 auto;
-	padding: 10px;
-	padding-bottom: 50px;
+	padding: 10px 100px 10px 100px;
 	margin-bottom: 50px;
+}
+
+div.results-explanation {
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+p.explanation-title {
+	padding-top: 50px;
+	font-size: 20px;
+	text-align: left;
+}
+
+p.explanation-body {
+	font-size: 12px;
+	text-align: left;
+}
+
+p.Q-title {
+		font-size: 18px;
+	text-align: left;
+	text-decoration: bold;
+}
+
+p.Q-body {
+	font-size: 14px;
+	text-align: left;
+	margin: 0 auto;
+	padding: -50px;
 }
 
 .twitter-timeline-div {
@@ -105,6 +134,7 @@ font-size: 18px;
 margin: 0 auto;
 padding-top: 50px;
 padding-bottom: 50px;
+max-width: 100%;
 }
 
 h3.home-h4 {
