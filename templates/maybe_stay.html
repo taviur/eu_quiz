@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <head>
-<link href="{{ url_for('static',filename='styles/dist/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ url_for('static',filename='styles/dist/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
      <link rel='stylesheet' type='text/css' href='{{ url_for('static',filename='styles/main.css') }}'>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['In',     55],
+          ['Maybe In',      43],
+          ['Maybe Out',  32],
+          ['Out',    42]
+        ]);
+
+        var options = {
+          title: 'How others voted',
+          pieHole: 0.6,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
 </head>
 <body id="results">
-<div id="page-wrap">
-		<header>
+  <div id="page-wrap">
+	<header>
 		<div class="results-header"><div name="maybe_stay">
 			<h1 class="results">You should maybe vote to stay in the EU.</h1>
 	</header>
-	<div class="results-body">
-	<h3>(But also, y'know, do your own research too...)</h3>
+  <div class="results-body">
+      <h3>(But also, y'know, do your own research too...)</h3>
 </div></div></div></div>
+
+<div id="donutchart" style="width: 900px; height: 500px;"></div>
+<br />
+<br />
+<br />
+<br />
+  <div class="twitter-body"><p class="twitter-feed">What people are tweeting about</p></div>
+<div class="twitter-timeline-div">
+ <a class="twitter-timeline" href="https://twitter.com/hashtag/LeaveEU" data-widget-id="710511265848885248" data-chrome="transparent">#LeaveEU Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<a class="twitter-timeline" href="https://twitter.com/hashtag/EUreferendum" data-widget-id="710511735590019072" data-chrome="transparent">#EUreferendum Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<a class="twitter-timeline" href="https://twitter.com/hashtag/StrongerIn" data-widget-id="710512374827061253" data-chrome="transparent">#StrongerIn Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</div>
 </body>

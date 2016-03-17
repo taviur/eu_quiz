@@ -12,8 +12,43 @@ div.results-header {
 
 div.results-body {
 	background: rgba(255, 255, 255, 0.5);
-	padding: 0px 100px 100px 100px;
-	margin-bottom: 100px;
+	margin: 0 auto;
+	padding: 10px;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+}
+
+.twitter-timeline-div {
+	background: rgba(255, 255, 255, 0.8);
+	text-align: center;	
+	padding: 10px;
+	margin: 0 auto;
+		-webkit-columns: 100px 3; /* Chrome, Safari, Opera */
+    -moz-columns: 100px 3; /* Firefox */
+    columns: 100px 3;
+   -webkit-column-gap: 100px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 100px; /* Firefox */
+    column-gap: 100px;
+}
+
+div.twitter-body {
+		background: rgba(255, 255, 255, 0.8);
+	text-align: center;	
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+
+p.twitter-feed {
+font-size: 30px;
+padding: 60px 0px 20px 0px;
+margin: 0 auto;
+text-align: center;
+}
+
+#donutchart {
+	background: rgba(255, 255, 255, 0.5);
+	margin: 0 auto;
+	margin-bottom: 50px;
 }
 
 div#title {
@@ -85,11 +120,6 @@ h3.home-h4 {
 	margin: 0 auto;
 }
 
-#donutchart {
-	background: rgba(255, 255, 255, 0.5);
-	padding: 0px 100px 100px 100px;
-	margin: 0 auto;
-}
 
 h2#question-h2 {
 font-size: 30px;
